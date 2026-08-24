@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+
+{% block title %}Features{% endblock %}
+
+{% block content %}
+
+<section class="features-section">
+
+    <div class="container">
+
+        <!-- Heading -->
+
+        <div class="features-heading">
+
+            <h1>Why Learn With Us?</h1>
+
+            <p>
+                Build your programming skills with practical training,
+                projects, and career-focused learning.
+            </p>
+
+        </div>
+
+
+        <!-- Feature Cards -->
+
+        <div class="row g-4">
+
+
+            <!-- Feature 1 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        💻
+                    </div>
+
+                    <h3>Programming Courses</h3>
+
+                    <p>
+                        Learn popular programming technologies such as
+                        Python, C, C++, Java, Web Development and more.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature 2 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🚀
+                    </div>
+
+                    <h3>Practical Learning</h3>
+
+                    <p>
+                        Improve your coding skills through hands-on
+                        exercises, assignments, and real-time projects.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature 3 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        📝
+                    </div>
+
+                    <h3>Career-Focused Training</h3>
+
+                    <p>
+                        Build your portfolio, gain practical experience,
+                        and prepare yourself for future career opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature 4 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        👨‍💻
+                    </div>
+
+                    <h3>Expert Guidance</h3>
+
+                    <p>
+                        Learn programming concepts with proper guidance
+                        and step-by-step explanations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature 5 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        📂
+                    </div>
+
+                    <h3>Real-Time Projects</h3>
+
+                    <p>
+                        Work on practical projects and gain experience
+                        by building real-world applications.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature 6 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🏆
+                    </div>
+
+                    <h3>Certificate</h3>
+
+                    <p>
+                        Complete your course successfully and receive
+                        a certificate for your skills and achievements.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Section -->
+
+        <div class="features-cta">
+
+            <h2>Start Your Programming Journey Today</h2>
+
+            <p>
+                Learn new technologies, improve your coding skills,
+                and build amazing projects.
+            </p>
+
+            <a href="{% url 'add_student' %}" class="btn btn-primary btn-lg">
+
+                Join Now
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

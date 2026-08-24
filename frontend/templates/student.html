@@ -1,0 +1,102 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Student Form{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+
+<div class="student-box">
+<div class="studimg">
+    <img src="{% static 'images/ne.jpg' %}" alt="student_image">
+</div>
+    <div class="student-form">
+    {% if edit_student %}
+    
+        <h2>EDIT STUDENT</h2>
+
+        <form method="POST"
+              action="{% url 'edit_student' edit_student.id %}"
+              enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label>Student Name</label>
+                {{ form.studentname }}
+            </div>
+
+            <div class="form-group">
+                <label>Education</label>
+                {{ form.education }}
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                {{ form.phone }}
+            </div>
+
+            <div class="form-group">
+                <label>City</label>
+                {{ form.city }}
+            </div>
+
+            <div class="form-group">
+                <label>Picture</label>
+                {{ form.picture }}
+            </div>
+
+            <button type="submit" class="btn btn-success">
+                Update
+            </button>
+
+        </form>
+
+    {% else %}
+
+        <h2>ADD STUDENT</h2>
+
+        <form method="POST"
+              action="{% url 'add_student' %}"
+              enctype="multipart/form-data" class="add">
+
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label>Student Name</label>
+                {{ form.studentname }}
+            </div>
+
+            <div class="form-group">
+                <label>Education</label>
+                {{ form.education }}
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                {{ form.phone }}
+            </div>
+
+            <div class="form-group">
+                <label>City</label>
+                {{ form.city }}
+            </div>
+
+            <div class="form-group">
+                <label>Picture</label>
+                {{ form.picture }}
+            </div>
+
+            <button type="submit" class="btn">
+                Submit
+            </button>
+
+        </form>
+
+    {% endif %}
+    </div>    
+</div>
+
+{% endblock %}

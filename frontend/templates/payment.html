@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+
+{% block title %}Payment{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4 mx-auto"
+         style="max-width:600px;">
+
+        <h2 class="text-center mb-4">
+            Course Payment
+        </h2>
+
+
+        {% if error %}
+
+        <div class="alert alert-danger">
+            {{ error }}
+        </div>
+
+        {% endif %}
+
+
+        <form method="POST"
+              action="{% url 'payment_submit' %}">
+
+            {% csrf_token %}
+
+
+            <!-- STUDENT -->
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Student Name
+                </label>
+
+                <select
+                    name="student_id"
+                    class="form-select"
+                    required>
+
+                    <option value="">
+                        Select Student
+                    </option>
+
+                    {% for s in students %}
+
+                    <option value="{{ s.id }}">
+                        {{ s.studentname }}
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+
+            <!-- COURSE -->
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Course
+                </label>
+
+                <input
+                    type="text"
+                    name="course"
+                    class="form-control"
+                    value="{{ course }}"
+                    readonly>
+
+            </div>
+
+
+            <!-- TOTAL FEE -->
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Total Course Fee
+                </label>
+
+                <input
+                    type="number"
+                    name="total_fee"
+                    id="total_fee"
+                    class="form-control"
+                    value="{{ amount }}"
+                    readonly>
+
+            </div>
+
+
+            <!-- AMOUNT PAID -->
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Amount Paid Now
+                </label>
+
+                <input
+                    type="number"
+                    name="paid_amount"
+                    id="paid_amount"
+                    class="form-control"
+                    placeholder="Enter amount paid"
+                    min="1"
+                    required>
+
+            </div>
+
+
+            <!-- PAYMENT METHOD -->
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Payment Method
+                </label>
+
+
+                <div class="form-check">
+
+                    <input
+                        class="form-check-input"
+                        type="radio"
+                        name="payment_method"
+                        value="Cash on Hand"
+                        required>
+
+                    <label class="form-check-label">
+                        💵 Cash on Hand
+                    </label>
+
+                </div>
+
+
+                <div class="form-check">
+
+                    <input
+                        class="form-check-input"
+                        type="radio"
+                        name="payment_method"
+                        value="GPay">
+
+                    <label class="form-check-label">
+                        🟢 GPay
+                    </label>
+
+                </div>
+
+
+                <div class="form-check">
+
+                    <input
+                        class="form-check-input"
+                        type="radio"
+                        name="payment_method"
+                        value="PhonePe">
+
+                    <label class="form-check-label">
+                        🔵 PhonePe
+                    </label>
+
+                </div>
+
+
+                <div class="form-check">
+
+                    <input
+                        class="form-check-input"
+                        type="radio"
+                        name="payment_method"
+                        value="Net Banking">
+
+                    <label class="form-check-label">
+                        🏦 Net Banking
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRANSACTION ID -->
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Transaction ID
+                    <small>(Optional)</small>
+                </label>
+
+                <input
+                    type="text"
+                    name="transaction_id"
+                    class="form-control"
+                    placeholder="Enter transaction ID">
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-success w-100">
+
+                Save Payment
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

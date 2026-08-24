@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+    
+<section class="section pt-5 pb-5" id="pricing-plans">
+    <div class="top"></div>
+    <div class="container">
+      <!-- ***** Section Title Start ***** -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="center-heading">
+            <h2 class="section-title">Pricing Plans</h2>
+          </div>
+        </div>
+        <div class="offset-lg-3 col-lg-6">
+          <div class="center-text">
+            <p>A modern course-selling platform to discover, explore, and purchase online courses easily.
+Learn from expert trainers with structured lessons, practical projects, and career-focused skills.</p>
+          </div>
+        </div>
+      </div>
+      <!-- ***** Section Title End ***** -->
+
+      <div class="row">
+        <!-- ***** Pricing Item Start ***** -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-item active">
+            <div class="pricing-header">
+              <h3 class="pricing-title">PYTHON </h3>
+            </div>
+            <div class="pricing-body">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price">10,000</span>
+                <span class="period">/3-Month</span>
+              </div>
+              <ul class="list">
+                <li class="active">Python Programming Basics</li>
+                <li class="active">Advanced Python Concepts</li>
+                <li class="active">Real-Time Mini Projects</li>
+                <li class="active">Project Guidance</li>
+                <li class="active">Certificate Included</li>
+           
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="{% url 'payment' %}?course=Python&amount=10000"class="btn-primary-line">Select Plan</a>
+            </div>
+          </div>
+        </div>
+        <!-- ***** Pricing Item End ***** -->
+
+        <!-- ***** Pricing Item Start ***** -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-item active">
+            <div class="pricing-header">
+              <h3 class="pricing-title">FULL STACK</h3>
+            </div>
+            <div class="pricing-body">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price">60,000</span>
+                <span class="period">/6-Month</span>
+              </div>
+              <ul class="list">
+                <li class="active">HTML, CSS & JavaScript</li>
+                <li class="active">Bootstrap & Responsive Design</li>
+                <li class="active">Django Framework</li>
+                <li class="active">MySQL Database</li>
+                <li class="active">Real-Time Full Stack Projects</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="{% url 'payment' %}?course=Full Stack&amount=60000"class="btn-primary-line">Select Plan</a>
+            </div>
+          </div>
+        </div>
+        <!-- ***** Pricing Item End ***** -->
+
+        <!-- ***** Pricing Item Start ***** -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-item active">
+            <div class="pricing-header">
+              <h3 class="pricing-title">UI/UX</h3>
+            </div>
+            <div class="pricing-body">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price">35,000</span>
+                <span class="period">/6-Month</span>
+              </div>
+              <ul class="list">
+                <li class="active">UI/UX Design Fundamentals</li>
+                <li class="active">User Research & Wireframing</li>
+                <li class="active">Figma Tools & Prototyping</li>
+                <li class="active">Real-Time Design Projects</li>
+                <li class="active">Portfolio Development</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="{% url 'payment' %}?course=UI/UX&amount=35000"class="btn-primary-line">Select Plan</a>
+            </div>
+          </div>
+        </div>
+        <!-- ***** Pricing Item End ***** -->
+
+        <!-- ***** Pricing Item Start ***** -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-item active">
+            <div class="pricing-header">
+              <h3 class="pricing-title">After Effect</h3>
+            </div>
+            <div class="pricing-body">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price">40,000</span>
+                <span class="period">/6-Month</span>
+              </div>
+              <ul class="list">
+                <li class="active">Motion Graphics</li>
+                <li class="active">Text & Logo Animation</li>
+                <li class="active">Visual Effects (VFX)</li>
+                <li class="active">Video Transitions & Effects</li>
+                <li class="active">Green Screen & Compositing</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="{% url 'payment' %}?course=After Effects&amount=40000"class="btn-primary-line">Select Plan</a>
+            </div>
+          </div>
+        </div>
+        <!-- ***** Pricing Item End ***** -->
+
+        <!-- ***** Pricing Item Start ***** -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-item active">
+            <div class="pricing-header">
+              <h3 class="pricing-title">Photoshop</h3>
+            </div>
+            <div class="pricing-body">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price">15,000</span>
+                <span class="period">/6-Month</span>
+              </div>
+              <ul class="list">
+                <li class="active">Photo Editing & Retouching</li>
+                <li class="active">Advertisement Design</li>
+                <li class="active">Background Removal & Manipulation</li>
+                <li class="active">Poster & Banner Design</li>
+                <li class="active">Creative Effects & Compositing</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="{% url 'payment' %}?course=Photoshop&amount=15000"class="btn-primary-line">Select Plan</a>
+            </div>
+          </div>
+        </div>
+        <!-- ***** Pricing Item End ***** -->
+
+        <!-- ***** Pricing Item Start ***** -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-item active">
+            <div class="pricing-header">
+              <h3 class="pricing-title">Digital Marketing </h3>
+            </div>
+            <div class="pricing-body">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price">28,000</span>
+                <span class="period">/6-Month</span>
+              </div>
+              <ul class="list">
+                <li class="active">SEO & Keyword Research</li>
+                <li class="active">Social Media Marketing</li>
+                <li class="active">Google Ads & Campaigns</li>
+                <li class="active">Content Marketing</li>
+                <li class="active">Analytics & Performance Tracking</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="{% url 'payment' %}?course=Digital Marketing&amount=28000"class="btn-primary-line">Select Plan</a>
+            </div>
+          </div>
+        </div>
+        <!-- ***** Pricing Item End ***** -->
+      </div>
+    </div>
+  </section>
+{% endblock %}

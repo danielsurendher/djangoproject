@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<section class="home-section">
+
+    <!-- Background Image -->
+    <div class="home-bg">
+        <img src="{% static 'images/ne.jpg' %}" alt="Students">
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="home-overlay"></div>
+
+
+    <!-- Content -->
+    <div class="container home-content">
+
+        <div class="row align-items-center min-vh-100">
+
+            <div class="col-lg-7 col-md-8">
+
+                <h1 class="home-title">
+                    Welcome to <span>GTEC</span>
+                </h1>
+
+                <h2 class="home-subtitle">
+                  Learn. Code. Create.
+                </h2>
+
+                <p class="home-text">
+                    Start your programming journey with industry-focused courses designed
+    to build strong coding skills through practical learning and real-time projects.
+                </p>
+
+
+                <div class="home-buttons">
+
+                    <a href="{% url 'pricing' %}"
+                       class="btn btn-info btn-lg">
+                      Explore Courses
+                    </a>
+
+                    <a href="{% url 'features' %}"
+                       class="btn btn-outline-light btn-lg">
+                       Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES SECTION -->
+
+<section class="features-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-heading">
+               Why Learn With Us?
+            </h2>
+
+            <p class="text-muted">
+                 Learn programming skills that help you build real-world applications and projects.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- Feature 1 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                         💻
+                    </div>
+
+                    <h4>
+                      Programming Courses
+                    </h4>
+
+                    <p>
+                        Learn popular technologies including Python, Full Stack Development,
+    UI/UX, Digital Marketing, Photoshop and After Effects
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature 2 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🚀
+                    </div>
+
+                    <h4>
+                     Practical Learning
+                    </h4>
+
+                    <p>
+                        Improve your skills through hands-on coding exercises,
+    practical assignments and real-time projects.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature 3 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        ✏️
+                    </div>
+
+                    <h4>
+                      Career-Focused Training
+                    </h4>
+
+                    <p>
+                       Build a strong portfolio, gain practical experience
+    and prepare yourself for future career opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA SECTION -->
+
+<section class="cta-section">
+
+    <div class="container text-center">
+
+        <h2>
+             Ready to Start Your Learning Journey?
+        </h2>
+
+        <p>
+           Choose your course, learn new skills and start building your future today.
+        </p>
+
+        <a href="{% url 'pricing' %}"
+           class="btn btn-light btn-lg">
+
+            View Courses
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    {% load static %}
+    {% load bootstrap5 %}
+
+    {% bootstrap_css %}
+
+    <link rel="stylesheet"
+          type="text/css"
+          href="{% static 'CSS/design.css' %}?v=1000">
+          <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container-fluid">
+
+        <!-- BRAND -->
+
+        <a class="navbar-brand"
+           href="{% url 'home' %}">
+
+            Gtec
+
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="custom-toggler-icon">☰</span>
+
+        </button>
+
+
+        <!-- COLLAPSIBLE NAVBAR -->
+
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
+
+
+            <!-- LEFT NAVIGATION -->
+
+            <ul class="navbar-nav me-auto">
+
+                <li class="nav-item">
+
+                    <a class="nav-link active"
+                       href="{% url 'home' %}">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="{% url 'features' %}">
+
+                        Features
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="{% url 'pricing' %}">
+
+                        Pricing
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="{% url 'add_student' %}">
+
+                        Add Student
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="{% url 'view_students' %}">
+
+                        View Student
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <!-- LOGOUT RIGHT SIDE -->
+
+            <div class="logout">
+
+                <a class="nav-link"
+                   href="{% url 'logout_view' %}">
+
+                    Logout
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</nav>
+<main>
+
+{% block content %}
+
+{% endblock %}
+</main>
+
+<footer class="custom-footer text-center">
+
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+
+    <!-- Section: Social media -->
+    <section class="mb-4">
+
+      <!-- Facebook -->
+      <a class="btn text-white btn-floating m-1 social-btn"
+         style="background-color: #3b5998;"
+         href="https://www.facebook.com/g.tec.thiruvarur/"
+         role="button">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <!-- Twitter -->
+      <a class="btn text-white btn-floating m-1 social-btn"
+         style="background-color: #55acee;"
+         href="#!"
+         role="button">
+        <i class="fab fa-twitter"></i>
+      </a>
+
+      <!-- Google -->
+      <a class="btn text-white btn-floating m-1 social-btn"
+         style="background-color: #dd4b39;"
+         href="#!"
+         role="button">
+        <i class="fab fa-google"></i>
+      </a>
+
+      <!-- Instagram -->
+      <a class="btn text-white btn-floating m-1 social-btn"
+         style="background-color: #ac2bac;"
+         href="https://www.instagram.com/gtecthiruvarur/"
+         role="button">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <!-- LinkedIn -->
+      <a class="btn text-white btn-floating m-1 social-btn"
+         style="background-color: #0082ca;"
+         href="https://in.linkedin.com/in/gtec-thiruvarur-51707835a"
+         role="button">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+
+      <!-- GitHub -->
+      <a class="btn text-white btn-floating m-1 social-btn"
+         style="background-color: #333333;"
+         href="#!"
+         role="button">
+        <i class="fab fa-github"></i>
+      </a>
+
+    </section>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-copyright">
+
+    © 2026 Copyright:
+    
+    <a href="{% url 'home' %}">
+      Gtec
+    </a>
+
+  </div>
+
+</footer>
+<!-- IMPORTANT: Bootstrap JavaScript -->
+
+{% bootstrap_javascript %}
+
+</body>
+
+</html>
