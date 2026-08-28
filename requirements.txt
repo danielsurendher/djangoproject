@@ -205,7 +205,6 @@ pygame==2.6.1
 PyGetWindow==0.0.9
 Pygments==2.19.1
 PyMsgBox==1.0.9
-PyMySQL==1.2.0
 pynndescent==0.5.13
 pynput==1.8.1
 pyparsing==3.2.3
