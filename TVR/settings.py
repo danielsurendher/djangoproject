@@ -76,14 +76,24 @@ WSGI_APPLICATION = 'TVR.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+#DATABASES = {
+#'default': {
+#     'ENGINE': 'django.db.backends.mysql',
+#      'NAME': 'gtec',
+#       'USER': 'root',
+#       'PASSWORD': '',
+#       'HOST': 'localhost',
+#      'PORT': '3306',
+#   }
+#}
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gtec',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': os.environ.get('gtec'),
+        'USER': os.environ.get('root'),
+        'PASSWORD': os.environ.get(''),
+        'HOST': os.environ.get('localhost'),
+        'PORT': os.environ.get('3306'),
     }
 }
 
