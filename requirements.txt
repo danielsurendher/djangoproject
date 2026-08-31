@@ -1,7 +1,11 @@
-﻿Django==5.2.7
-gunicorn==23.0.0
+Django==4.2.30
+django-bootstrap-v5==1.0.11
+
+asgiref==3.9.2
+sqlparse==0.5.3
+tzdata==2025.2
+
 mysqlclient==2.2.8
-whitenoise==6.11.0
-python-dotenv==1.1.0
-Pillow==11.3.0
-PyMySQL==1.1.1
+Pillow
+gunicorn
+whitenoise
