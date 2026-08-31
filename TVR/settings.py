@@ -89,17 +89,26 @@ WSGI_APPLICATION = 'TVR.wsgi.application'
 #      'PORT': '3306',
 #   }
 #}
+#DATABASES = {
+#   'default': {
+#     'ENGINE': 'django.db.backends.mysql',
+#       'NAME': os.environ.get('gtec'),
+#       'USER': os.environ.get('root'),
+#       'PASSWORD': os.environ.get(''),
+#       'HOST': os.environ.get('localhost'),
+#       'PORT': os.environ.get('3306'),
+#   }
+#}
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('gtec'),
-        'USER': os.environ.get('root'),
-        'PASSWORD': os.environ.get(''),
-        'HOST': os.environ.get('localhost'),
-        'PORT': os.environ.get('3306'),
+        'NAME': os.environ.get('MYSQLDATABASE'),
+        'USER': os.environ.get('MYSQLUSER'),
+        'PASSWORD': os.environ.get('MYSQLPASSWORD'),
+        'HOST': os.environ.get('MYSQLHOST'),
+        'PORT': os.environ.get('MYSQLPORT', '3306'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
