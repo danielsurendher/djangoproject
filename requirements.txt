@@ -9,3 +9,4 @@ mysqlclient==2.2.8
 Pillow
 gunicorn
 whitenoise
+PyMySQL
