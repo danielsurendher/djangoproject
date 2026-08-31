@@ -27,9 +27,7 @@ SECRET_KEY = 'django-insecure-ie2t1nc)+h+^td=3r+85@(m#4k@n1i@bi@b0rth8$&&h1(0zb_
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = [
-    "https://gtec-production.up.railway.app",
-]
+
 
 
 # Application definition
