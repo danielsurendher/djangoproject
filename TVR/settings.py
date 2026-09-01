@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://gtec-production.up.railway.app",
+   
     "https://djangoproject-production-7f3b.up.railway.app",
 ]
 
